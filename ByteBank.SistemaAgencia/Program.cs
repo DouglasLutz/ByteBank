@@ -3,7 +3,7 @@ using ByteBank.Modelos.Funcionarios;
 using ByteBank.Modelos.Sistemas;
 using System;
 
-namespace Banco
+namespace ByteBank.SistemaAgencia
 {
     class Program
     {
