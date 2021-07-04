@@ -9,9 +9,9 @@ namespace ByteBank.SistemaAgencia
     {
         static void Main(string[] args)
         {
-            CodigoDeContas();
+            // CodigoDeContas();
             // CodigoDeBonificacoes();
-            // CodigoDeSistemaInterno();
+            CodigoDeSistemaInterno();
         }
 
         static void CodigoDeContas()

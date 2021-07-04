@@ -8,12 +8,13 @@ namespace ByteBank.Modelos.Sistemas
 {
     public class ParceiroAutenticavel : IAutenticavel
     {
+        private AutenticacaoHelper _autenticacaoHelper = new();
         private string _codigoSecreto = "jjj";
         public bool Autenticar(string senha)
         {
             Console.WriteLine("Autenticando parceiro...");
 
-            if (senha == _codigoSecreto)
+            if (_autenticacaoHelper.CompararSenhas(_codigoSecreto, senha))
             {
                 Console.WriteLine("Senha correta!");
                 return true;

@@ -9,6 +9,7 @@ namespace ByteBank.Modelos.Funcionarios
 {
     public abstract class FuncionarioAutenticavel : Funcionario, IAutenticavel
     {
+        private AutenticacaoHelper _autenticacaoHelper = new();
         private string _senha;
 
         public FuncionarioAutenticavel(double salario, string cpf, string nome, string senha) :
@@ -21,7 +22,7 @@ namespace ByteBank.Modelos.Funcionarios
         {
             Console.WriteLine("Autenticando usuário " + Nome + "...");
 
-            if (senha == _senha)
+            if (_autenticacaoHelper.CompararSenhas(_senha, senha))
             {
                 Console.WriteLine("Senha correta!");
                 return true;
