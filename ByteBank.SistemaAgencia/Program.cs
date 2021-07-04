@@ -13,7 +13,8 @@ namespace ByteBank.SistemaAgencia
             // CodigoDeContas();
             // CodigoDeBonificacoes();
             // CodigoDeSistemaInterno();
-            TrabalhandoComDatas();
+            // TrabalhandoComDatas();
+            CursoStrings.Teste();
         }
 
         static void TrabalhandoComDatas()
