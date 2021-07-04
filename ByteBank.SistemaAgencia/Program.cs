@@ -2,6 +2,7 @@
 using ByteBank.Modelos.Funcionarios;
 using ByteBank.Modelos.Sistemas;
 using System;
+using Humanizer;
 
 namespace ByteBank.SistemaAgencia
 {
@@ -11,7 +12,22 @@ namespace ByteBank.SistemaAgencia
         {
             // CodigoDeContas();
             // CodigoDeBonificacoes();
-            CodigoDeSistemaInterno();
+            // CodigoDeSistemaInterno();
+            TrabalhandoComDatas();
+        }
+
+        static void TrabalhandoComDatas()
+        {
+            DateTime vencimento = new DateTime(2023, 08, 04);
+            DateTime agora = DateTime.Now;
+
+            Console.WriteLine("Vencimento: " + vencimento);
+            Console.WriteLine("Agora: " + agora);
+
+            TimeSpan diferenca = vencimento - agora;
+            string diferencaLegivel = TimeSpanHumanizeExtensions.Humanize(diferenca);
+
+            Console.WriteLine("Vencimento em " + diferencaLegivel);
         }
 
         static void CodigoDeContas()
